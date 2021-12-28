@@ -401,7 +401,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('✅️Share to Whatsapp✅️', url='https://api.whatsapp.com/send?text=https://t.me/moviecafe34')
             ],[
             InlineKeyboardButton('Movie Group❤️', url='https://t.me/moviecafe34'),
-            InlineKeyboardButton('Main Channel🖤', url='https://t.me/TeamEvamaria')
+            InlineKeyboardButton('Main Channel🖤', url='https://t.me/FLYING_CREW')
             ],[
             InlineKeyboardButton('Series Channel⚡️', url='https://t.me/moviecafeseries'),
             InlineKeyboardButton('Movie Group❤️', url='https://t.me/moviecafe34')
