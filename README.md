@@ -1,13 +1,5 @@
-
-
-
-[![name](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Ajithkannan1234/EvaMaria)
-
-
-
-
 <p align="center">
-  <img src="assets/logo.jpg" alt="https://github.com/Ajithkannan1234/EvaMaria">
+  <img src="assets/logo.jpg" alt="Eva Maria Logo">
 </p>
 <h1 align="center">
   <b>Eva Maria Bot</b>
@@ -40,7 +32,7 @@
 
 ## Variables
 
-Read [this](https://github.com/Ajithkannan1234/EvaMaria) before you start messing up with your edits.
+Read [this](https://telegram.dog/TeamEvamaria/12) before you start messing up with your edits.
 
 ### Required Variables
 * `BOT_TOKEN`: Create a bot using [@BotFather](https://telegram.dog/BotFather), and get the Telegram API token.
@@ -64,8 +56,8 @@ You can deploy this bot anywhere.
 <details><summary>Deploy To Heroku</summary>
 <p>
 <br>
-<a href="https://heroku.com/deploy">
-  <img src="https://github.com/Ajithkannan1234/EvaMaria" alt="Deploy">
+<a href="https://telegram.dog/XTZ_HerokuBot?start=RXZhbWFyaWFURy9FdmFNYXJpYSBtYXN0ZXI">
+  <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy">
 </a>
 </p>
 </details>
