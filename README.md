@@ -57,7 +57,7 @@ You can deploy this bot anywhere.
 <p>
 <br>
 <a href="https://heroku.com/deploy">
-  <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy">
+  <img src="https://github.com/Ajithkannan1234/EvaMaria" alt="Deploy">
 </a>
 </p>
 </details>
