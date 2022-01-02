@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/logo.jpg" alt="Eva Maria Logo">
+  <img src="assets/logo.jpg" alt="https://github.com/Ajithkannan1234/EvaMaria">
 </p>
 <h1 align="center">
   <b>Eva Maria Bot</b>
@@ -32,7 +32,7 @@
 
 ## Variables
 
-Read [this](https://telegram.dog/TeamEvamaria/12) before you start messing up with your edits.
+Read [this](https://github.com/Ajithkannan1234/EvaMaria) before you start messing up with your edits.
 
 ### Required Variables
 * `BOT_TOKEN`: Create a bot using [@BotFather](https://telegram.dog/BotFather), and get the Telegram API token.
