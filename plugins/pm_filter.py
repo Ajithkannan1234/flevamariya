@@ -693,10 +693,9 @@ async def advantage_spell_chok(msg):
     movielist = list(dict.fromkeys(movielist)) # removing duplicates
     if not movielist:
         k = await msg.reply_text(
-                text="I couldn't find anything related to that. Check your spelling  [MSG ME🥴](https://t.me/Filmhunters345_bot) m")
-                disable_web_page_preview=True
-        await asyncio.sleep(60)
-        await k.delete()
+                text="I couldn't find anything related to that. Check your spelling  [MSG ME🥴](https://t.me/Testing363738_bot) ")
+                await asyncio.sleep(60)
+                await k.delete()
         return
     SPELL_CHECK[msg.message_id] = movielist
     btn = [[
