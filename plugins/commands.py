@@ -71,7 +71,7 @@ async def start(client, message):
             btn.append([InlineKeyboardButton(" 🔄 Try Again", callback_data=f"checksub#{message.command[1]}")])
         await client.send_message(
             chat_id=message.from_user.id,
-            text="**Please Join My Updates Channel to use this Bot!**",
+            text="**🚫READ THIS INSTRUCTION🚫 \n \n 🗣നിങ്ങൾ ചോദിക്കുന്ന സിനിമകൾ നിങ്ങൾക്ക് ലഭിക്കണം എന്നുണ്ടെങ്കിൽ നിങ്ങൾ താഴെ കൊടുത്തിട്ടുള്ള ചാനലിൽ ചാനലിൽ ജോയിൻ ചെയ്യണം. ജോയിൻ ചെയ്ത ശേഷം TRY AGAIN പ്രെസ്സ് ചെയ്താൽ  MOVIE ലഭിക്കും😍 \n \n 🗣 In Order In Order To Get The Movie Requested By You in Our Groups, You Will Have To Join Our Official Channel First. After That, PRESS Try AGAIN BUTTON..I'll Send You That Movie Privately 🙈 \n \n 👇 JOIN THIS CHANNEL & PRESS TRY AGAIN**",
             reply_markup=InlineKeyboardMarkup(btn),
             parse_mode="markdown"
             )
@@ -112,10 +112,10 @@ async def start(client, message):
         f_caption = f"{files.file_name}"
     buttons = [
                     [
-                        InlineKeyboardButton('Movie group😌❤️', url='https://t.me/Filmhunters123')
+                        InlineKeyboardButton('Movie group😌❤️', url='https://t.me/moviecafe34')
                     ],
                     [
-                        InlineKeyboardButton("Movie channel😈⚡️", url="https://t.me/+BQP56d3IH0piYjM1"),
+                        InlineKeyboardButton("Movie channel😈⚡️", url="https://t.me/FLYING_CREW"),
                     ]
                     ]
     await client.send_cached_media(
