@@ -18,10 +18,10 @@ async def start(client, message):
     if message.chat.type in ['group', 'supergroup']:
         buttons = [
             [
-                InlineKeyboardButton('Movie Group❤️', url='https://t.me/moviecafe34')
+                InlineKeyboardButton('Movie Group❤️', url='https://t.me/moviecafe234')
             ],
             [
-                InlineKeyboardButton('Main Channel🖤', url='https://t.me/FLYING_CREW'),
+                InlineKeyboardButton('Main Channel🖤', url='httpmoviecafe2+BQP56d3IH0piYjM1'),
             ]
             ]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -37,9 +37,9 @@ async def start(client, message):
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
         buttons = [[
-            InlineKeyboardButton('✅️Share to Whatsapp✅️', url='https://api.whatsapp.com/send?text=https://t.me/moviecafe34')
+            InlineKeyboardButton('✅️Share to Whatsapp✅️', url='https://api.whatsapp.com/send?text=https://t.me/moviecafe234')
             ],[
-            InlineKeyboardButton('Movie Group❤️', url='https://t.me/moviecafe34'),
+            InlineKeyboardButton('Movie Group❤️', url='https://t.me/moviecafe234'),
             InlineKeyboardButton('Main Channel🖤', url='https://t.me/FLYING_CREW')
             ],[
             InlineKeyboardButton('Series Channel⚡️', url='https://t.me/moviecafeseries'),
