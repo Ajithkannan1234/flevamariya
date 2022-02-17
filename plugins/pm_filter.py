@@ -575,9 +575,116 @@ async def auto_filter(client, msg, spoll=False):
         else:
             return
     else:
-       
-        
+        settings = await get_settings(msg.message.chat.id)
+        message = msg.message.reply_to_message  # msg will be callback query
+        search, files, offset, total_results = spoll
+    pre = 'filep' if settings['file_secure'] else 'file'
+    if settings["button"]:
+        btn = [
+            [
+                InlineKeyboardButton(
+                    text=f"[{get_size(file.file_size)}] {file.file_name}", callback_data=f'{pre}#{file.file_id}'
+                ),
+            ]
+            for file in files
+        ]
+    else:
+        btn = [
+            [
+                InlineKeyboardButton(
+                    text=f"{file.file_name}",
+                    callback_data=f'{pre}#{file.file_id}',
+                ),
+                InlineKeyboardButton(
+                    text=f"{get_size(file.file_size)}",
+                    callback_data=f'{pre}_#{file.file_id}',
+                ),
+            ]
+            for file in files
+        ]
 
+    if offset != "":
+        key = f"{message.chat.id}-{message.message_id}"
+        BUTTONS[key] = search
+        req = message.from_user.id if message.from_user else 0
+        btn.append(
+            [InlineKeyboardButton(text=f"🗓 1/{round(int(total_results) / 10)}", callback_data="pages"),
+             InlineKeyboardButton(text="NEXT ⏩", callback_data=f"next_{req}_{key}_{offset}")]
+        )
+        btn.insert(0,
+            [InlineKeyboardButton(text="Join Our Channel😌❤️",url="https://t.me/+BQP56d3IH0piYjM1")]
+        )
+    else:
+        btn.append(
+            [InlineKeyboardButton(text="🗓 1/1", callback_data="pages")]
+        )
+        btn.insert(0,
+            [InlineKeyboardButton(text="Join Our Channel😌❤️",url="https://t.me/+BQP56d3IH0piYjM1")]
+        )
+    reply_id = message.reply_to_message.message_id if message.reply_to_message else message.message_id
+    imdb = await get_poster(search, file=(files[0]).file_name) if settings["imdb"] else None
+    TEMPLATE = settings['template']
+    if imdb:
+        cap = TEMPLATE.format(
+            query=search,
+            title=imdb['title'],
+            votes=imdb['votes'],
+            aka=imdb["aka"],
+            seasons=imdb["seasons"],
+            box_office=imdb['box_office'],
+            localized_title=imdb['localized_title'],
+            kind=imdb['kind'],
+            imdb_id=imdb["imdb_id"],
+            cast=imdb["cast"],
+            runtime=imdb["runtime"],
+            countries=imdb["countries"],
+            certificates=imdb["certificates"],
+            languages=imdb["languages"],
+            director=imdb["director"],
+            writer=imdb["writer"],
+            producer=imdb["producer"],
+            composer=imdb["composer"],
+            cinematographer=imdb["cinematographer"],
+            music_team=imdb["music_team"],
+            distributors=imdb["distributors"],
+            release_date=imdb['release_date'],
+            year=imdb['year'],
+            genres=imdb['genres'],
+            poster=imdb['poster'],
+            plot=imdb['plot'],
+            rating=imdb['rating'],
+            url=imdb['url'],
+            **locals()
+        )
+    else:
+        cap = f"<b>🎬 Title:</b> {search}\n</b>\n<b><a href='https://t.me/joinchat/9w9cP_Yxylc4MTk1'>© OUR (Series & Movies) Channel</a></b>\n\n<b>✍️ Note:This message will be Auto-deleted after 3 minutes to avoid copyright issues.</b>"
+    if imdb and imdb.get('poster'):
+        try:
+            hehe = await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024], reply_to_message_id=reply_id, reply_markup=InlineKeyboardMarkup(btn))
+            await asyncio.sleep(180)
+            await hehe.delete()
+            await message.delete()
+        except (MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty):
+            pic = imdb.get('poster')
+            poster = pic.replace('.jpg', "._V1_UX360.jpg")
+            hmm = await message.reply_photo(photo=poster, caption=cap[:1024], reply_to_message_id=reply_id, reply_markup=InlineKeyboardMarkup(btn))
+            await asyncio.sleep(180)
+            await hmm.delete()
+            await message.delete()
+        except Exception as e:
+            logger.exception(e)
+            fek = await message.reply_photo(photo="https://telegra.ph/file/82b5bbbab6d5e5593b6b2.jpg", caption=cap, reply_to_message_id=reply_id, reply_markup=InlineKeyboardMarkup(btn))
+            await asyncio.sleep(180)
+            await fek.delete()
+            await msg.delete()
+    else:
+        fuk = await message.reply_photo(photo="https://telegra.ph/file/8b42f6caf6ef5fd76766f.jpg", caption=cap, reply_to_message_id=reply_id, reply_markup=InlineKeyboardMarkup(btn))
+        await asyncio.sleep(180)
+        await fuk.delete()
+        await msg.delete()
+    if spoll:
+        await msg.message.delete()
+        
 async def advantage_spell_chok(msg):
     query = re.sub(r"\b(pl(i|e)*?(s|z+|ease|se|ese|(e+)s(e)?)|((send|snd|giv(e)?|gib)(\sme)?)|movie(s)?|new|latest|br((o|u)h?)*|^h(e|a)?(l)*(o)*|mal(ayalam)?|t(h)?amil|file|that|find|und(o)*|kit(t(i|y)?)?o(w)?|thar(u)?(o)*w?|kittum(o)*|aya(k)*(um(o)*)?|full\smovie|any(one)|with\ssubtitle(s)?)", "", msg.text, flags=re.IGNORECASE) # plis contribute some common words 
     query = query.strip() + " movie"
