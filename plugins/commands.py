@@ -21,7 +21,7 @@ async def start(client, message):
                 InlineKeyboardButton('Movie Group❤️', url='https://t.me/moviecafe234')
             ],
             [
-                InlineKeyboardButton('Main Channel🖤', url='httpmoviecafe2+BQP56d3IH0piYjM1'),
+                InlineKeyboardButton('Main Channel🖤', url="https://t.me/+BQP56d3IH0piYjM1"),
             ]
             ]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -42,8 +42,8 @@ async def start(client, message):
             InlineKeyboardButton('Movie Group❤️', url='https://t.me/moviecafe234'),
             InlineKeyboardButton('Main Channel🖤', url='https://t.me/FLYING_CREW')
             ],[
-            InlineKeyboardButton('Series Channel⚡️', url='https://t.me/moviecafeseries'),
-            InlineKeyboardButton('Movie Group❤️', url='https://t.me/moviecafe34')
+            InlineKeyboardButton('Series Channel⚡️', url='https://t.me/+9w9cP_Yxylc4MTk1'),
+            InlineKeyboardButton('Theater print🔥', url='https://t.me/+CcIlxBS_WIMyNmNl')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
@@ -83,8 +83,8 @@ async def start(client, message):
             InlineKeyboardButton('Movie Group❤️', url='https://t.me/moviecafe34'),
             InlineKeyboardButton('Main Channel🖤', url='https://t.me/FLYING_CREW')
             ],[
-            InlineKeyboardButton('Series Channel⚡️', url='https://t.me/moviecafeseries'),
-            InlineKeyboardButton('Movie Group❤️', url='https://t.me/moviecafe34')
+            InlineKeyboardButton('Series Channel⚡️', url='https://t.me/+9w9cP_Yxylc4MTk1'),
+            InlineKeyboardButton('Theater print🔥', url='https://t.me/+CcIlxBS_WIMyNmNl')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
@@ -115,7 +115,7 @@ async def start(client, message):
                         InlineKeyboardButton('Movie group😌❤️', url='https://t.me/moviecafe34')
                     ],
                     [
-                        InlineKeyboardButton("Movie channel😈⚡️", url="https://t.me/FLYING_CREW"),
+                        InlineKeyboardButton("Movie channel😈⚡️", url="https://t.me/+BQP56d3IH0piYjM1"),
                     ]
                     ]
     await client.send_cached_media(
