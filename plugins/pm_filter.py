@@ -643,7 +643,7 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"<b><a href='https://t.me/joinchat/9w9cP_Yxylc4MTk1'>© OUR (Series & Movies) Channel</a></b>\n\n<b>✍️ Note:This message will be Auto-deleted after 3 minutes to avoid copyright issues.</b>🔥"
+        cap = f"<b><a href='https://t.me/joinchat/9w9cP_Yxylc4MTk1'>© OUR (Series & Movies) Channel</a></b>\n\n<b>✍️ Note:This message will be Auto-deleted after 2 minutes to avoid copyright issues.</b>🔥"
     if imdb and imdb.get('poster'):
         try:
             hehe = await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024], reply_to_message_id=reply_id, reply_markup=InlineKeyboardMarkup(btn))
@@ -711,7 +711,7 @@ async def advantage_spell_chok(msg):
             [
                  InlineKeyboardButton("🔎 Search On Google 🔍", url=f"https://google.com/search?q={search}")
                  ],[
-                 InlineKeyboardButton("Msg Me🥴", url="https://t.me/Filmhunters345_bot")
+                 InlineKeyboardButton("Msg Me🥴", url="https://t.me/Testing363738_bot")
             ]
         ]
     )
