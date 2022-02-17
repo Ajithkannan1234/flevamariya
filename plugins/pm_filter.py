@@ -715,7 +715,7 @@ async def advantage_spell_chok(msg):
             ]
         ]
     )
-        k = await msg.reply_text("I couldn't find anything related to that Check your spelling🙏  \n \n ഗൂഗിളിൽ പൊയി സ്പെല്ലിങ്ങും❗️RELEASE❗️ഡേറ്റും CHECK ചെയുക🥴 \n \n Spelling ശെരി ആയിട്ടും Movie കിട്ടിയില്ലെങ്കിൽ മാത്രം MSG ME🥴")
+        k = await msg.reply_text("I couldn't find anything related to that Check your spelling🙏  \n \n ഗൂഗിളിൽ പൊയി സ്പെല്ലിങ്ങും❗️RELEASE❗️ഡേറ്റും CHECK ചെയുക🥴 \n \n Spelling ശെരി ആയിട്ടും Movie കിട്ടിയില്ലെങ്കിൽ മാത്രം MSG ME🥴", reply_markup=hmm)
         await asyncio.sleep(40)
         await k.delete()
         return
