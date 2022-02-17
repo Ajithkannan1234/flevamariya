@@ -643,29 +643,29 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"Here is what i found for your query {search} \n \n Uploaded by @moviecafe234🔥"
+        cap = f"<b><a href='https://t.me/joinchat/9w9cP_Yxylc4MTk1'>© OUR (Series & Movies) Channel</a></b>\n\n<b>✍️ Note:This message will be Auto-deleted after 3 minutes to avoid copyright issues.</b>🔥"
     if imdb and imdb.get('poster'):
         try:
             hehe = await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024], reply_to_message_id=reply_id, reply_markup=InlineKeyboardMarkup(btn))
-            await asyncio.sleep(180)
+            await asyncio.sleep(120)
             await hehe.delete()
             await message.delete()
         except (MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty):
             pic = imdb.get('poster')
             poster = pic.replace('.jpg', "._V1_UX360.jpg")
             hmm = await message.reply_photo(photo=poster, caption=cap[:1024], reply_to_message_id=reply_id, reply_markup=InlineKeyboardMarkup(btn))
-            await asyncio.sleep(180)
+            await asyncio.sleep(120)
             await hmm.delete()
             await message.delete()
         except Exception as e:
             logger.exception(e)
             fek = await message.reply_photo(photo="https://telegra.ph/file/5f0ea56de7873b503a730.jpg", caption=cap, reply_to_message_id=reply_id, reply_markup=InlineKeyboardMarkup(btn))
-            await asyncio.sleep(180)
+            await asyncio.sleep(120)
             await fek.delete()
             await msg.delete()
     else:
         fuk = await message.reply_photo(photo="https://telegra.ph/file/5f0ea56de7873b503a730.jpg", caption=cap, reply_to_message_id=reply_id, reply_markup=InlineKeyboardMarkup(btn))
-        await asyncio.sleep(180)
+        await asyncio.sleep(120)
         await fuk.delete()
         await msg.delete()
     if spoll:
@@ -680,7 +680,7 @@ async def advantage_spell_chok(msg):
     gs_parsed = []
     if not g_s:
         k = await msg.reply("I couldn't find any movie in that name👋")
-        await asyncio.sleep(10)
+        await asyncio.sleep(30)
         await k.delete()
         return
     regex = re.compile(r".*(imdb|wikipedia).*", re.IGNORECASE) # look for imdb / wiki results
@@ -705,8 +705,17 @@ async def advantage_spell_chok(msg):
     movielist += [(re.sub(r'(\-|\(|\)|_)', '', i, flags=re.IGNORECASE)).strip() for i in gs_parsed]
     movielist = list(dict.fromkeys(movielist)) # removing duplicates
     if not movielist:
-        k = await msg.reply_text("I couldn't find anything related to that Check your spelling🙏  \n \n ഗൂഗിളിൽ പൊയി സ്പെല്ലിങ്ങും❗️RELEASE❗️ഡേറ്റും CHECK ചെയുക🥴 \n \n Spelling ശെരി ആയിട്ടും Movie കിട്ടിയില്ലെങ്കിൽ മാത്രം [MSG ME🥴](https://t.me/Testing363738_bot) ")
-        await asyncio.sleep(60)
+        hmm = InlineKeyboardMarkup(
+        [
+            [
+                 InlineKeyboardButton("🔎 Search On Google 🔍", url=f"https://google.com/search?q={search}")
+                 ],[
+                 InlineKeyboardButton("Msg Me🥴", url="https://t.me/Filmhunters345_bot")
+            ]
+        ]
+    )
+        k = await msg.reply_text("I couldn't find anything related to that Check your spelling🙏  \n \n ഗൂഗിളിൽ പൊയി സ്പെല്ലിങ്ങും❗️RELEASE❗️ഡേറ്റും CHECK ചെയുക🥴 \n \n Spelling ശെരി ആയിട്ടും Movie കിട്ടിയില്ലെങ്കിൽ മാത്രം MSG ME🥴")
+        await asyncio.sleep(40)
         await k.delete()
         return
     SPELL_CHECK[msg.message_id] = movielist
@@ -717,7 +726,9 @@ async def advantage_spell_chok(msg):
                 )
             ] for k, movie in enumerate(movielist)]
     btn.append([InlineKeyboardButton(text="Close", callback_data=f'spolling#{user}#close_spellcheck')])
-    await msg.reply("I couldn't find anything related to that\nDid you mean any one of these?", reply_markup=InlineKeyboardMarkup(btn))
+    m = await msg.reply("I couldn't find anything related to that\nDid you mean any one of these?", reply_markup=InlineKeyboardMarkup(btn))
+    await asyncio.sleep(40)
+    await m.delete()
     
 
 async def manual_filters(client, message, text=False):
