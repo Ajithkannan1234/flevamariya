@@ -18,7 +18,7 @@ async def start(client, message):
     if message.chat.type in ['group', 'supergroup']:
         buttons = [
             [
-                InlineKeyboardButton('Movie Group❤️', url='https://t.me/moviecafe234')
+                InlineKeyboardButton('Movie Group❤️', url='https://t.me/Filmhunters123')
             ],
             [
                 InlineKeyboardButton('Main Channel🖤', url="https://t.me/+BQP56d3IH0piYjM1"),
@@ -37,10 +37,10 @@ async def start(client, message):
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
         buttons = [[
-            InlineKeyboardButton('✅️Share to Whatsapp✅️', url='https://api.whatsapp.com/send?text=https://t.me/moviecafe234')
+            InlineKeyboardButton('✅️Share to Whatsapp✅️', url='https://api.whatsapp.com/send?text=https://t.me/Filmhunters123')
             ],[
-            InlineKeyboardButton('Movie Group❤️', url='https://t.me/moviecafe234'),
-            InlineKeyboardButton('Main Channel🖤', url='https://t.me/FLYING_CREW')
+            InlineKeyboardButton('Movie Group❤️', url='https://t.me/Filmhunters123'),
+            InlineKeyboardButton('Main Channel🖤', url='https://t.me/+BQP56d3IH0piYjM1')
             ],[
             InlineKeyboardButton('Series Channel⚡️', url='https://t.me/+9w9cP_Yxylc4MTk1'),
             InlineKeyboardButton('Theater print🔥', url='https://t.me/+CcIlxBS_WIMyNmNl')
@@ -78,10 +78,10 @@ async def start(client, message):
         return
     if len(message.command) ==2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
         buttons = [[
-            InlineKeyboardButton('✅️Share to Whatsapp✅️', url='https://api.whatsapp.com/send?text=https://t.me/moviecafe34')
+            InlineKeyboardButton('✅️Share to Whatsapp✅️', url='https://api.whatsapp.com/send?text=https://t.me/Filmhunters123')
             ],[
-            InlineKeyboardButton('Movie Group❤️', url='https://t.me/moviecafe34'),
-            InlineKeyboardButton('Main Channel🖤', url='https://t.me/FLYING_CREW')
+            InlineKeyboardButton('Movie Group❤️', url='https://t.me/Filmhunters123'),
+            InlineKeyboardButton('Main Channel🖤', url='https://t.me/+BQP56d3IH0piYjM1')
             ],[
             InlineKeyboardButton('Series Channel⚡️', url='https://t.me/+9w9cP_Yxylc4MTk1'),
             InlineKeyboardButton('Theater print🔥', url='https://t.me/+CcIlxBS_WIMyNmNl')
@@ -112,7 +112,7 @@ async def start(client, message):
         f_caption = f"{files.file_name}"
     buttons = [
                     [
-                        InlineKeyboardButton('Movie group😌❤️', url='https://t.me/moviecafe34')
+                        InlineKeyboardButton('Movie group😌❤️', url='https://t.me/Filmhunters123')
                     ],
                     [
                         InlineKeyboardButton("Movie channel😈⚡️", url="https://t.me/+BQP56d3IH0piYjM1"),
