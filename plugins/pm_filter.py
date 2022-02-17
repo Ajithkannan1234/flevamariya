@@ -398,10 +398,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.answer()
     elif query.data == "start":
         buttons = [[
-            InlineKeyboardButton('✅️Share to Whatsapp✅️', url='https://api.whatsapp.com/send?text=https://t.me/moviecafe234')
+            InlineKeyboardButton('✅️Share to Whatsapp✅️', url='https://api.whatsapp.com/send?text=https://t.me/Filmhunters123')
             ],[
-            InlineKeyboardButton('Movie Group❤️', url='https://t.me/moviecafe234'),
-            InlineKeyboardButton('Main Channel🖤', url='https://t.me/FLYING_CREW')
+            InlineKeyboardButton('Movie Group❤️', url='https://t.me/Filmhunters123'),
+            InlineKeyboardButton('Main Channel🖤', url='https://t.me/+BQP56d3IH0piYjM1')
             ],[
             InlineKeyboardButton('Series Channel⚡️', url='https://t.me/+9w9cP_Yxylc4MTk1'),
             InlineKeyboardButton('Theater print🔥', url='https://t.me/+CcIlxBS_WIMyNmNl')
@@ -659,12 +659,12 @@ async def auto_filter(client, msg, spoll=False):
             await message.delete()
         except Exception as e:
             logger.exception(e)
-            fek = await message.reply_photo(photo="https://telegra.ph/file/5f0ea56de7873b503a730.jpg", caption=cap, reply_to_message_id=reply_id, reply_markup=InlineKeyboardMarkup(btn))
+            fek = await message.reply_photo(photo="https://telegra.ph/file/bcba5ef36d6b27696c176.jpg", caption=cap, reply_to_message_id=reply_id, reply_markup=InlineKeyboardMarkup(btn))
             await asyncio.sleep(120)
             await fek.delete()
             await msg.delete()
     else:
-        fuk = await message.reply_photo(photo="https://telegra.ph/file/5f0ea56de7873b503a730.jpg", caption=cap, reply_to_message_id=reply_id, reply_markup=InlineKeyboardMarkup(btn))
+        fuk = await message.reply_photo(photo="https://telegra.ph/file/bcba5ef36d6b27696c176.jpg", caption=cap, reply_to_message_id=reply_id, reply_markup=InlineKeyboardMarkup(btn))
         await asyncio.sleep(120)
         await fuk.delete()
         await msg.delete()
