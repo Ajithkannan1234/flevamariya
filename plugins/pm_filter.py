@@ -403,8 +403,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('Movie Group❤️', url='https://t.me/moviecafe234'),
             InlineKeyboardButton('Main Channel🖤', url='https://t.me/FLYING_CREW')
             ],[
-            InlineKeyboardButton('Series Channel⚡️', url='https://t.me/moviecafeseries'),
-            InlineKeyboardButton('Movie Group❤️', url='https://t.me/moviecafe34')
+            InlineKeyboardButton('Series Channel⚡️', url='https://t.me/+9w9cP_Yxylc4MTk1'),
+            InlineKeyboardButton('Theater print🔥', url='https://t.me/+CcIlxBS_WIMyNmNl')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
