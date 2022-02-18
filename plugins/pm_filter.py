@@ -39,7 +39,7 @@ async def next_page(bot, query):
 
     ident, req, key, offset = query.data.split("_")
     if int(req) not in [query.from_user.id, 0]:
-        return await query.answer("There is something wrong \n\n 1-May Be <b>Spelling Mistake<\b> \n 2-May be Movie is not Released or Still in Theaters \n 3-May be that movie is not our database", show_alert=True)
+        return await query.answer("There is something wrong \n\n <b>1-May Be Spelling Mistake \n 2-May be Movie is not Released or Still in Theaters \n 3-May be that movie is not our database<\b>", show_alert=True)
     try:
         offset = int(offset)
     except:
@@ -112,7 +112,7 @@ async def next_page(bot, query):
 async def advantage_spoll_choker(bot, query):
     _, user, movie_ = query.data.split('#')
     if int(user) != 0 and query.from_user.id != int(user):
-        return await query.answer("There is something wrong \n\n 1-May Be <b>Spelling Mistake<\b> \n 2-May be Movie is not Released or Still in Theaters \n 3-May be that movie is not our database", show_alert=True)
+        return await query.answer("There is something wrong \n\n <b>1-May Be Spelling Mistake \n 2-May be Movie is not Released or Still in Theaters \n 3-May be that movie is not our database</b>", show_alert=True)
     if movie_  == "close_spellcheck":
         return await query.message.delete()
     movies = SPELL_CHECK.get(query.message.reply_to_message.message_id)
