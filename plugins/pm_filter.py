@@ -716,7 +716,7 @@ async def advantage_spell_chok(msg):
         ]
     )
         k = await msg.reply_text("Check your SPELLING & RELEASE DATE🙏  \n \n ഗൂഗിളിൽ പൊയി സ്പെല്ലിങ്ങും❗️RELEASE❗️ഡേറ്റും CHECK ചെയുക🥴 \n \n രണ്ടും ശെരി ആയിട്ടും Movie കിട്ടിയില്ലെങ്കിൽ മാത്രം MSG ME🥴", reply_markup=hmm)
-        await asyncio.sleep(40)
+        await asyncio.sleep(30)
         await k.delete()
         return
     SPELL_CHECK[msg.message_id] = movielist
@@ -728,7 +728,7 @@ async def advantage_spell_chok(msg):
             ] for k, movie in enumerate(movielist)]
     btn.append([InlineKeyboardButton(text="Close", callback_data=f'spolling#{user}#close_spellcheck')])
     m = await msg.reply("Did you Mean any one of these👇👇?", reply_markup=InlineKeyboardMarkup(btn))
-    await asyncio.sleep(40)
+    await asyncio.sleep(20)
     await m.delete()
     
 
