@@ -128,7 +128,7 @@ async def advantage_spoll_choker(bot, query):
             await auto_filter(bot, query, k)
         else:
             k = await query.message.edit('please check release date and spelling🙏 \n \n ഗൂഗിളിൽ പൊയി സ്പെല്ലിങ്ങും❗️RELEASE❗️ഡേറ്റും CHECK ചെയുക🥴 \n \n രണ്ടും ശെരി ആയിട്ടും Movie കിട്ടിയില്ലെങ്കിൽ മാത്രം [Msg Me](https://t.me/Testing363738_bot)')
-            await asyncio.sleep(40)
+            await asyncio.sleep(20)
             await k.delete()
 
 
@@ -728,7 +728,7 @@ async def advantage_spell_chok(msg):
             ] for k, movie in enumerate(movielist)]
     btn.append([InlineKeyboardButton(text="Close", callback_data=f'spolling#{user}#close_spellcheck')])
     m = await msg.reply("Did you Mean any one of these👇👇?", reply_markup=InlineKeyboardMarkup(btn))
-    await asyncio.sleep(30)
+    await asyncio.sleep(20)
     await m.delete()
     
 
