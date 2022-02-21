@@ -111,6 +111,7 @@ async def next_page(bot, query):
 @Client.on_callback_query(filters.regex(r"^spolling"))
 async def advantage_spoll_choker(bot, query):
     search = msg.text
+    msg = query
     _, user, movie_ = query.data.split('#')
     if int(user) != 0 and query.from_user.id != int(user):
         return await query.answer("There is something wrong \n\n 1-May Be Spelling Mistake \n\n 2-May be Movie is not Released or Still in Theaters \n\n 3-May be that movie is not our database", show_alert=True)
