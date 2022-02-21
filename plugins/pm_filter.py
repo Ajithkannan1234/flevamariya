@@ -127,7 +127,7 @@ async def advantage_spoll_choker(bot, query):
             k = (movie, files, offset, total_results)
             await auto_filter(bot, query, k)
         else:
-            hmm = InlineKeyboardMarkup(
+            reply_markup=InlineKeyboardMarkup(
         [
             [
                  InlineKeyboardButton("🔎 Search On Google 🔍", url="https://t.me/Filmhunters123")
@@ -136,7 +136,7 @@ async def advantage_spoll_choker(bot, query):
             ]
         ]
     )      
-            k = await query.message.edit('please check release date and spelling🙏 \n \n ഗൂഗിളിൽ പൊയി സ്പെല്ലിങ്ങും❗️RELEASE❗️ഡേറ്റും CHECK ചെയുക🥴 \n \n രണ്ടും ശെരി ആയിട്ടും Movie കിട്ടിയില്ലെങ്കിൽ മാത്രം',replay_markup=hmm)
+            k = await query.message.edit('please check release date and spelling🙏 \n \n ഗൂഗിളിൽ പൊയി സ്പെല്ലിങ്ങും❗️RELEASE❗️ഡേറ്റും CHECK ചെയുക🥴 \n \n രണ്ടും ശെരി ആയിട്ടും Movie കിട്ടിയില്ലെങ്കിൽ മാത്രം',replay_markup)
             await asyncio.sleep(20)
             await k.delete()
 
