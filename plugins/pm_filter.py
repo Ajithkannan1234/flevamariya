@@ -718,13 +718,13 @@ async def advantage_spell_chok(msg):
         hmm = InlineKeyboardMarkup(
         [
             [
-                 InlineKeyboardButton("🔎 Search On Google 🔍", url=f"https://google.com/search?q={search}")
-                 ],[
                  InlineKeyboardButton("Msg Me🥴", url="https://t.me/Testing363738_bot")
+                 ],[
+                 InlineKeyboardButton("🔎 Search On Google 🔍", url=f"https://google.com/search?q={search}")
             ]
         ]
     )
-        k = await msg.reply_text("Check your SPELLING & RELEASE DATE🙏  \n \n ഗൂഗിളിൽ പൊയി സ്പെല്ലിങ്ങും❗️RELEASE❗️ഡേറ്റും CHECK ചെയുക🥴 \n \n രണ്ടും ശെരി ആയിട്ടും Movie കിട്ടിയില്ലെങ്കിൽ മാത്രം MSG ME🥴", reply_markup=hmm)
+        k = await msg.reply_text("please check release date & spelling🙏 \n \n [MSG ME](https://t.me/Testing363738_bot) Only if you don't get the movie even though both are true \n \n രണ്ടും ശെരി ആയിട്ടും Movie കിട്ടിയില്ലെങ്കിൽ മാത്രം [MSG ME👇](https://t.me/Testing363738_bot)", reply_markup=hmm)
         await asyncio.sleep(30)
         await k.delete()
         return
