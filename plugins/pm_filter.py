@@ -616,6 +616,9 @@ async def auto_filter(client, msg, spoll=False):
         btn.insert(0,
             [InlineKeyboardButton(text="Join Our Channel😌❤️",url="https://t.me/+BQP56d3IH0piYjM1")]
         )
+        btn.insert(0,
+            [InlineKeyboardButton(text="join channel",url="https://t.me/+txtUUj8amJIyZjA1"), InlineKeyboardButton(text="join",url="https://t.me/moviecafe234")] 
+        )
     else:
         btn.append(
             [InlineKeyboardButton(text="🗓 1/1",callback_data="pages")]
