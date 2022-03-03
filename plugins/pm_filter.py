@@ -624,7 +624,7 @@ async def auto_filter(client, msg, spoll=False):
             [InlineKeyboardButton(text="Join Our Channel😌❤️",url="https://t.me/+BQP56d3IH0piYjM1")]
         )
         btn.insert(0,
-            [InlineKeyboardButton(text="join channel",url"https://t.me/+txtUUj8amJIyZjA1"), InlineKeyboardButton(text="join",url="https://t.me/moviecafe234")]  
+            [InlineKeyboardButton(text="join channel",url="https://t.me/+txtUUj8amJIyZjA1"), InlineKeyboardButton(text="join",url="https://t.me/moviecafe234")]  
 
     reply_id = message.reply_to_message.message_id if message.reply_to_message else message.message_id
     imdb = await get_poster(search, file=(files[0]).file_name) if IMDB else None
