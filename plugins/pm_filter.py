@@ -614,7 +614,7 @@ async def auto_filter(client, msg, spoll=False):
             [InlineKeyboardButton(text=f"🗓 1/{round(int(total_results)/10)}",callback_data="pages"), InlineKeyboardButton(text="NEXT ⏩",callback_data=f"next_{req}_{key}_{offset}")]
         )
         btn.insert(0,
-            [InlineKeyboardButton(text="OTT'S🖤",url="https://t.me/+txtUUj8amJIyZjA1"), InlineKeyboardButton(text="PRE DVD'S❤️",url="https://t.me/+CcIlxBS_WIMyNmNl")] 
+            [InlineKeyboardButton(text="OTT'S🖤",url="https://t.me/+txtUUj8amJIyZjA1"), InlineKeyboardButton(text="PRE DVD'S💙",url="https://t.me/+CcIlxBS_WIMyNmNl")] 
         )
         btn.insert(0,
             [InlineKeyboardButton(text="Join Our Channel😌❤️",url="https://t.me/+BQP56d3IH0piYjM1")]
@@ -625,7 +625,7 @@ async def auto_filter(client, msg, spoll=False):
             [InlineKeyboardButton(text="🗓 1/1",callback_data="pages")]
         )
         btn.insert(0,
-            [InlineKeyboardButton(text="OTT'S🖤",url="https://t.me/+txtUUj8amJIyZjA1"), InlineKeyboardButton(text="PRE DVD'S❤️",url="https://t.me/+CcIlxBS_WIMyNmNl")] 
+            [InlineKeyboardButton(text="OTT'S🖤",url="https://t.me/+txtUUj8amJIyZjA1"), InlineKeyboardButton(text="PRE DVD'S💙",url="https://t.me/+CcIlxBS_WIMyNmNl")] 
         )
         btn.insert(0,
             [InlineKeyboardButton(text="Join Our Channel😌❤️",url="https://t.me/+BQP56d3IH0piYjM1")]
