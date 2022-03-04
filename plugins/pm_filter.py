@@ -611,7 +611,10 @@ async def auto_filter(client, msg, spoll=False):
         BUTTONS[key] = search
         req = message.from_user.id if message.from_user else 0
         btn.append(
-            [InlineKeyboardButton(text=f"🗓 1/{round(int(total_results)/10)}",callback_data="pages"), InlineKeyboardButton(text="Check PM!", url=f"https://t.me/{temp.U_NAME}"), InlineKeyboardButton(text="NEXT ⏩",callback_data=f"next_{req}_{key}_{offset}")]
+            [InlineKeyboardButton(text=f"🗓 1/{round(int(total_results)/10)}",callback_data="pages"), InlineKeyboardButton(text="NEXT ⏩",callback_data=f"next_{req}_{key}_{offset}")]
+        )
+        btn.append(
+            [InlineKeyboardButton(text="Check My PM!", url=f"https://t.me/{temp.U_NAME}")]
         )
         btn.insert(0,
             [InlineKeyboardButton(text="OTT'S🖤",url="https://t.me/+txtUUj8amJIyZjA1"), InlineKeyboardButton(text="PRE DVD'S💙",url="https://t.me/+CcIlxBS_WIMyNmNl")] 
@@ -622,8 +625,10 @@ async def auto_filter(client, msg, spoll=False):
         
     else:
         btn.append(
-            [InlineKeyboardButton(text="🗓 1/1", callback_data="pages"),
-             InlineKeyboardButton(text="Check PM!", url=f"https://t.me/{temp.U_NAME}")]
+            [InlineKeyboardButton(text="🗓 1/1", callback_data="pages")    
+        )
+        btn.append(
+            [InlineKeyboardButton(text="Check My PM!", url=f"https://t.me/{temp.U_NAME}")]
         )
             
         btn.insert(0,
