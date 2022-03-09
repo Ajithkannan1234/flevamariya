@@ -121,7 +121,7 @@ async def start(client, message):
                         InlineKeyboardButton("Movie Suggestions⭕️", url="https://t.me/+7TJL12AYTfYyNWU1"),
                     ],
                     [
-                        InlineKeyboardButton("OTT DVD UPDATES🔰", url="https://t.me/OTT_UPDATES4"),
+                        InlineKeyboardButton("OTT DVD UPDATES🔰", url="https://t.me/+oTwvr5JlaP40ZTg9"),
                     ]
                     ]
     await client.send_cached_media(
