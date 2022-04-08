@@ -420,7 +420,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('Main Channel🖤', url='https://t.me/+BQP56d3IH0piYjM1')
             ],[
             InlineKeyboardButton('Series Channel⚡️', url='https://t.me/+9w9cP_Yxylc4MTk1'),
-            InlineKeyboardButton('Theater print🔥', url='https://t.me/+CcIlxBS_WIMyNmNl')
+            InlineKeyboardButton('Theater print🔥', url='https://t.me/+F8nuwQXvek1hNTY9')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -624,7 +624,7 @@ async def auto_filter(client, msg, spoll=False):
             [InlineKeyboardButton(text="Check My PM!", url=f"https://t.me/{temp.U_NAME}")]
         )
         btn.insert(0,
-            [InlineKeyboardButton(text="OTT'S⭕️",url="https://t.me/+txtUUj8amJIyZjA1"), InlineKeyboardButton(text="PRE DVD'S⭕️",url="https://t.me/+CcIlxBS_WIMyNmNl")] 
+            [InlineKeyboardButton(text="OTT'S⭕️",url="https://t.me/+HJSlpKcSknszZmM1"), InlineKeyboardButton(text="PRE DVD'S⭕️",url="https://t.me/+F8nuwQXvek1hNTY9")] 
         )
         btn.insert(0,
             [InlineKeyboardButton(text="Join Our Channel😌❤️",url="https://t.me/+BQP56d3IH0piYjM1")]
@@ -639,7 +639,7 @@ async def auto_filter(client, msg, spoll=False):
         )
             
         btn.insert(0,
-            [InlineKeyboardButton(text="OTT'S⭕️",url="https://t.me/+txtUUj8amJIyZjA1"), InlineKeyboardButton(text="PRE DVD'S⭕️",url="https://t.me/+CcIlxBS_WIMyNmNl")] 
+            [InlineKeyboardButton(text="OTT'S⭕️",url="https://t.me/+HJSlpKcSknszZmM1"), InlineKeyboardButton(text="PRE DVD'S⭕️",url="https://t.me/+F8nuwQXvek1hNTY9")] 
         )
         btn.insert(0,
             [InlineKeyboardButton(text="Join Our Channel😌❤️",url="https://t.me/+BQP56d3IH0piYjM1")]
