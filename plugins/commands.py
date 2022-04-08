@@ -43,7 +43,7 @@ async def start(client, message):
             InlineKeyboardButton('Main Channel🖤', url='https://t.me/+BQP56d3IH0piYjM1')
             ],[
             InlineKeyboardButton('Series Channel⚡️', url='https://t.me/+9w9cP_Yxylc4MTk1'),
-            InlineKeyboardButton('Theater print🔥', url='https://t.me/+CcIlxBS_WIMyNmNl')
+            InlineKeyboardButton('Theater print🔥', url='https://t.me/+F8nuwQXvek1hNTY9')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
@@ -84,7 +84,7 @@ async def start(client, message):
             InlineKeyboardButton('Main Channel🖤', url='https://t.me/+BQP56d3IH0piYjM1')
             ],[
             InlineKeyboardButton('Series Channel⚡️', url='https://t.me/+9w9cP_Yxylc4MTk1'),
-            InlineKeyboardButton('Theater print🔥', url='https://t.me/+CcIlxBS_WIMyNmNl')
+            InlineKeyboardButton('Theater print🔥', url='https://t.me/+F8nuwQXvek1hNTY9')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
